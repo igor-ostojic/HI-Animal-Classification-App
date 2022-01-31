@@ -8,7 +8,13 @@
   --main-font: "Quicksand", sans-serif;
   --secondary-font: "Poppins", sans-serif;
 
+  /* dimensions */
+  --max-width: 1000px;
+
   /* colors */
+  --secondary-text: #96aab5;
+  --primary-text: #403f4d;
+  --accent-color: #8a69d2;
 }
 
 /* --------global styles-------- */
@@ -18,4 +24,109 @@
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--secondary-font);
+}
+
+body {
+  height: 100vh;
+}
+
+/* #root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+} */
+
+/* --------Desktop NavBar-------- */
+.desktop-nav {
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--max-width);
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2.5px solid var(--accent-color);
+}
+
+.brand {
+  max-width: 100%;
+  width: 65px;
+  transition: opacity 0.2s ease;
+}
+
+.brand:hover {
+  opacity: 0.65;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--secondary-text);
+  transition: color 0.2s ease;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-links a:hover {
+  color: var(--primary-text);
+}
+
+.login {
+  border-radius: 5px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: white !important;
+}
+
+.login:hover {
+  background-color: hsla(259, 54%, 62%, 0.7);
+  border: 2px solid hsla(259, 100%, 86%, 0.7);
+}
+
+/* --------Home-------- */
+/* .home {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.home-wrapper {
+  margin: 5rem auto;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+.chicken {
+  max-width: 100%;
+  width: 85%;
+}
+
+.right-side {
+  padding-top: 3rem;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.right-side h1 {
+  font-size: 4.3rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  line-height: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.right-side p {
+  font-size: 1.1rem;
+  color: #7a858b;
 }

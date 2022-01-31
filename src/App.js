@@ -1,6 +1,17 @@
-
 import { useState, useEffect, useRef } from 'react';
 import * as mobilenet from "@tensorflow-models/mobilenet";
+
+//pages
+import Home from './pages/Home';
+import About from './pages/About';
+import SignUp from './pages/SignUp';
+import LogIn from './pages/LogIn';
+import NavBar from './components/NavBar';
+
+//components
+
+
+
 
 function App() {
   const [isModelLoading, setIsModelLoading] = useState(false)
@@ -22,14 +33,17 @@ useEffect(() => {
   loadModel()
 }, [])
 
-if (isModelLoading) {
-  return <h2>Model Loading...</h2>
-}
+
 
 
   return (
     <div className="App">
-     <h1>model</h1>
+      <NavBar />
+     <Home />
+     {/* <About />
+     <SignUp />
+     <LogIn /> */}
+
     </div>
   );
 }
