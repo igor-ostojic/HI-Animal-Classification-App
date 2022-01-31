@@ -31,33 +31,48 @@ body {
   height: 100vh;
 }
 
-/* #root {
+#root {
   height: 100%;
 }
 
 .App {
   height: 100%;
-} */
+}
 
 /* --------Desktop NavBar-------- */
 .desktop-nav {
+  animation: fly-in-top 0.55s ease;
   margin: 0 auto;
   display: flex;
   max-width: var(--max-width);
   padding: 0.5rem;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2.5px solid var(--accent-color);
+  border-bottom: 2.5px solid #ebebeb;
 }
 
 .brand {
   max-width: 100%;
   width: 65px;
   transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
 }
 
 .brand:hover {
   opacity: 0.65;
+}
+
+@keyframes fly-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-links {
@@ -71,6 +86,9 @@ body {
   text-decoration: none;
   color: var(--secondary-text);
   transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
   padding: 0.25rem 0.5rem;
 }
 
@@ -91,42 +109,86 @@ body {
 }
 
 /* --------Home-------- */
-/* .home {
-  width: 100%;
-  height: 100%;
-  background-image: url(assets/wave.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+
+.home {
+  position: relative;
+  height: 80%;
+}
 
 .home-wrapper {
   margin: 5rem auto;
   max-width: var(--max-width);
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
 }
 
-.chicken {
+.monkey {
   max-width: 100%;
-  width: 85%;
+  width: 90%;
+  -webkit-animation: fade-in 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fade-in 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .right-side {
   padding-top: 3rem;
   align-self: flex-start;
   text-align: left;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fade-in 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .right-side h1 {
-  font-size: 4.3rem;
-  font-weight: 700;
+  font-size: 4.25rem;
+  font-weight: 00;
   color: var(--primary-text);
   line-height: 4.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .right-side p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
   color: #7a858b;
+}
+
+.credits {
+  font-size: 0.9rem;
+  bottom: 0;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.credits span {
+  color: var(--accent-color);
+}
+
+.credits a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.credits a:hover {
+  text-decoration: underline;
 }
