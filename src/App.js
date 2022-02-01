@@ -7,6 +7,7 @@ import About from './pages/About';
 import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import NavBar from './components/NavBar';
+import MobileNav from './components/MobileNav';
 
 //components
 
@@ -39,6 +40,7 @@ useEffect(() => {
   return (
     <div className="App">
       <NavBar />
+      <MobileNav />
      <Home />
      {/* <About />
      <SignUp />

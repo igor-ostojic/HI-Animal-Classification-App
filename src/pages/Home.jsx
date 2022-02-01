@@ -13,6 +13,9 @@ const Home = () => {
         <div className="right-side">
           <h1>Animal Classifier App</h1>
           <p>Find out the species of any animal in just a few seconds.</p>
+          <a href="#">
+            <button className="signup-btn">Try it out</button>
+          </a>
         </div>
       </div>
       <p className="credits">
