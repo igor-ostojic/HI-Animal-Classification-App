@@ -1,0 +1,68 @@
+/* --------Desktop NavBar-------- */
+.desktop-nav {
+  animation: fly-in-top 0.55s ease;
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--max-width);
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2.5px solid #ebebeb;
+}
+
+.brand {
+  max-width: 100%;
+  width: 65px;
+  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+}
+
+.brand:hover {
+  opacity: 0.65;
+}
+
+@keyframes fly-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--secondary-text);
+  transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-links a:hover {
+  color: var(--primary-text);
+}
+
+.login {
+  border-radius: 5px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: white !important;
+}
+
+.login:hover {
+  background-color: hsla(259, 54%, 62%, 0.7);
+  border: 2px solid hsla(259, 100%, 86%, 0.7);
+}

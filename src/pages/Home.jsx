@@ -1,4 +1,7 @@
-//components
+import { Link } from "react-router-dom";
+
+//styles
+import '../styles/Home.css'
 
 //assets
 import Monkey from "../assets/animals-slideshow/monkey.svg";
@@ -13,9 +16,9 @@ const Home = () => {
         <div className="right-side">
           <h1>Animal Classifier App</h1>
           <p>Find out the species of any animal in just a few seconds.</p>
-          <a href="#">
+          <Link to="/signup">
             <button className="signup-btn">Try it out</button>
-          </a>
+          </Link>
         </div>
       </div>
       <p className="credits">

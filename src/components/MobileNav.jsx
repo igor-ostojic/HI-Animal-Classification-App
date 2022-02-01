@@ -1,4 +1,8 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
+//styles
+import "../styles/MobileNav.css";
 
 //assets
 import Logo from "../assets/logo.svg";
@@ -41,24 +45,24 @@ const MobileNav = () => {
 
   return (
     <nav className="mobile-nav">
-      <a href="#">
+      <Link to="/">
         <img src={Logo} alt="Home page" className="brand" />
-      </a>
+      </Link>
       <button className="mobile-menu" onClick={HandleOpenMenu}>
         {openMenu ? mobileMenu : mobileMenuClose}
       </button>
       <div className="slide-in-menu" ref={slideMenu}>
         <ul className="mobile-nav-links">
           <li>
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#">Sign Up</a>
+            <Link to="/signup">Sign Up</Link>
           </li>
           <li>
-            <a href="#" className="login-mobile">
+            <Link to="/login" className="login-mobile">
               Log In
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

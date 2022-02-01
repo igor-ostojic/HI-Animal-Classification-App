@@ -1,0 +1,90 @@
+.about {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: fly-in 0.5s ease;
+}
+
+@keyframes fly-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.about h1 {
+  color: var(--primary-text);
+  font-size: 2.75rem;
+}
+
+.about-text-wrapper {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+.about-credits {
+  margin-bottom: 3rem;
+}
+
+.about-credits a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.app-uses {
+  margin: 0 auto;
+  width: 50%;
+  color: var(--primary-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-uses p {
+  margin-bottom: 1rem;
+}
+
+.app-uses span {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.about-image {
+  width: 45%;
+  max-width: 100%;
+}
+
+@media (max-width: 750px) {
+  .about {
+    width: 100%;
+    padding: 1rem;
+    max-width: var(--max-width);
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .app-uses {
+    margin: 0 auto;
+    width: 100%;
+    color: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
