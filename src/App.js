@@ -32,6 +32,7 @@ function App() {
     loadModel();
   }, []);
 
+ 
   return (
     <BrowserRouter>
       <div className="App">
