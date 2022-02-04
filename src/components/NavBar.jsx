@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useLogout } from '../hooks/useLogout';
 
 //styles
 import '../styles/NavBar.css'
@@ -7,10 +8,13 @@ import '../styles/NavBar.css'
 import Logo from "../assets/logo.svg";
 
 const NavBar = () => {
+
+  const { logout } = useLogout();
+
   return (
     <nav className="desktop-nav">
       <Link to="/">
-        <img src={Logo} alt="Home page" className="brand" />
+        <img src={Logo} alt="Home page" className="brand" title="Home Page"/>
       </Link>
       <ul className="nav-links">
         <li>
@@ -23,6 +27,9 @@ const NavBar = () => {
           <Link to="/login" className="login">
             Log In
           </Link>
+        </li>
+        <li>
+          <button className="logout" onClick={logout}>Log out</button>
         </li>
       </ul>
     </nav>

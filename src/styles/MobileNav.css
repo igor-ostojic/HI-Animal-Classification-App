@@ -54,6 +54,7 @@
     align-items: flex-end;
     gap: 2rem;
     list-style: none;
+    height: 100%;
   }
 
   .mobile-nav-links li {
@@ -67,5 +68,9 @@
     text-decoration: none;
     color: var(--accent-color);
     font-weight: 500;
+  }
+
+  .logout {
+    margin-top: 90%;
   }
 }

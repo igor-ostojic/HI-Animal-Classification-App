@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLogout } from '../hooks/useLogout';
 
 //styles
 import "../styles/MobileNav.css";
@@ -8,6 +9,9 @@ import "../styles/MobileNav.css";
 import Logo from "../assets/logo.svg";
 
 const MobileNav = () => {
+
+  const { logout } = useLogout();
+
   const mobileMenu = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -64,6 +68,9 @@ const MobileNav = () => {
               Log In
             </Link>
           </li>
+          <li>
+          <button className="logout" onClick={logout}>Log out</button>
+        </li>
         </ul>
       </div>
     </nav>

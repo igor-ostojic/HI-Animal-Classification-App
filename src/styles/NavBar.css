@@ -38,6 +38,7 @@
   display: flex;
   gap: 1.25rem;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
@@ -65,4 +66,20 @@
 .login:hover {
   background-color: hsla(259, 54%, 62%, 0.7);
   border: 2px solid hsla(259, 100%, 86%, 0.7);
+}
+
+.logout {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.195rem 0.5rem;
+  border-radius: 5px;
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+.logout:hover {
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
 }
