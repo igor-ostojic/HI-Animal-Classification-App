@@ -29,9 +29,6 @@ export const useSignup = () => {
       // add display name and user image to user
       await res.user.updateProfile({ displayName, photoURL: imgURL })
 
-      // dispatch login action
-      dispatch({ type: 'LOGIN', payload: res.user })
-
       if (!isCancelled) {
         setIsPending(false)
         setError(null)

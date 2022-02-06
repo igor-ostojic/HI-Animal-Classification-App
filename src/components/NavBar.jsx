@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLogout } from '../hooks/useLogout';
+import { useAuthContext } from "../hooks/useAuthContext";
 
 //styles
 import '../styles/NavBar.css'
@@ -10,6 +11,7 @@ import Logo from "../assets/logo.svg";
 const NavBar = () => {
 
   const { logout } = useLogout();
+  const { user } = useAuthContext();
 
   return (
     <nav className="desktop-nav">
@@ -17,6 +19,8 @@ const NavBar = () => {
         <img src={Logo} alt="Home page" className="brand" title="Home Page"/>
       </Link>
       <ul className="nav-links">
+        {!user && (
+      <>
         <li>
           <Link to="/about">About</Link>
         </li>
@@ -28,9 +32,17 @@ const NavBar = () => {
             Log In
           </Link>
         </li>
+        </>
+        ) }
+
+        {user && (
+          <>
+          <li>Hello, {user.displayName}</li>
         <li>
           <button className="logout" onClick={logout}>Log out</button>
         </li>
+        </>
+        )}
       </ul>
     </nav>
   );
