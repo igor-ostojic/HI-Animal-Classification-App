@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLogout } from '../hooks/useLogout';
+import { useAuthContext } from "../hooks/useAuthContext";
 
 //styles
 import "../styles/MobileNav.css";
@@ -11,6 +12,7 @@ import Logo from "../assets/logo.svg";
 const MobileNav = () => {
 
   const { logout } = useLogout();
+  const { user } = useAuthContext();
 
   const mobileMenu = (
     <svg
@@ -57,6 +59,8 @@ const MobileNav = () => {
       </button>
       <div className="slide-in-menu" ref={slideMenu}>
         <ul className="mobile-nav-links">
+        {!user && (
+          <>
           <li>
             <Link to="/about">About</Link>
           </li>
@@ -68,9 +72,19 @@ const MobileNav = () => {
               Log In
             </Link>
           </li>
-          <li>
-          <button className="logout" onClick={logout}>Log out</button>
-        </li>
+          </>
+          ) }
+
+          {user && (
+            <>
+              <li className="mobileUserInfo">hello, <span className="userName">{user.displayName}</span>
+              <img src={user.photoURL} alt="User Photo" className="userPhoto"/>
+              </li>
+                <li>
+                <button className="logout" onClick={logout}>Log out</button>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>

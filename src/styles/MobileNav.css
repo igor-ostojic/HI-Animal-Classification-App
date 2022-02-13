@@ -73,4 +73,18 @@
   .logout {
     margin-top: 90%;
   }
+
+  .mobileUserInfo {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+  }
+
+  .userName {
+    margin-left: 5px;
+  }
+
+  .userPhoto {
+    margin-left: 10px;
+  }
 }

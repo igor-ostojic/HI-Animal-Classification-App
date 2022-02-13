@@ -37,11 +37,11 @@ const NavBar = () => {
 
         {user && (
           <>
-          <li>Hello, {user.displayName}</li>
-        <li>
-          <button className="logout" onClick={logout}>Log out</button>
-        </li>
-        </>
+            <li>hello, <span className="userName">{user.displayName}</span></li>
+            <li><img src={user.photoURL} alt="User Photo" className="userPhoto"/></li>
+
+            <li><button className="logout" onClick={logout}>Log out</button></li>
+          </>
         )}
       </ul>
     </nav>
