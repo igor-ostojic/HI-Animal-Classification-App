@@ -1,0 +1,90 @@
+/* --------Mobile NavBar-------- */
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 11;
+    background-color: white;
+    padding: 0 1rem;
+  }
+
+  .mobile-menu {
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    border: none;
+    transform: scale(1.35);
+    z-index: 11;
+  }
+
+  .slide-in-menu {
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 60vh;
+    position: absolute;
+    padding: 5rem 1rem;
+    background-color: white;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: all 0.35s ease;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .show-menu {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    list-style: none;
+    height: 100%;
+  }
+
+  .mobile-nav-links li {
+    width: 100%;
+    text-align: right;
+  }
+
+  .mobile-nav-links a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+  }
+
+  .logout {
+    margin-top: 90%;
+  }
+
+  .mobileUserInfo {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+  }
+
+  .userName {
+    margin-left: 5px;
+  }
+
+  .userPhoto {
+    margin-left: 10px;
+  }
+}
