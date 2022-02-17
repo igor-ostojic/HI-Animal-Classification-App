@@ -10,7 +10,7 @@
   <p align="center">
     An awesome animal classification app made with React, Tensorflow & Firebase !
     <br />
-    <a href="hi-animal-classification-igor-ostojic.netlify.app"><strong>Check out the Live app here»</strong></a>
+    <a href="https://hi-animal-classification-igor-ostojic.netlify.app/"><strong>Check out the Live app here»</strong></a>
     <br />
     <br />
     <a href="https://hi-animal-classification-igor-ostojic.netlify.app/">View Demo</a>
