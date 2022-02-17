@@ -54,7 +54,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://hi-animal-classification-igor-ostojic.netlify.app/)
+[![Product Name Screen Shot][product-screenshot]](blob:https://imgur.com/79318492-c04d-4a62-99d8-567b70aceafd)
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
